@@ -9,6 +9,7 @@
 			<thead>
 				<tr>
 					<th>Name</th>
+					<th>Usecases</th>
 					<th class="{sorter: false}">&nbsp;</th>
 				</tr>
 			</thead>
@@ -16,6 +17,7 @@
 				<% @vocabs.each do |vocab| %>
 				  <tr>
 				    <td><%= link_to vocab.name, vocab %></td>
+						<td><%= link_to vocab.usecases.size,"#{ActionController::Base.relative_url_root}/vocabs/#{vocab.id}/usecases/" %></td>
 				    <td class="panel-grid-operations"><%= link_to 'Edit', edit_vocab_path(vocab) %> | <%= link_to 'Destroy', vocab, :confirm => 'Are you sure?', :method => :delete %></td>
 				  </tr>
 				<% end %>

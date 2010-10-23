@@ -9,7 +9,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :usecases, :has_many => [:vocabs,:topics]
 
-  map.resources :vocabs
+  map.resources :vocabs, :has_many => [:usecases]
   
   map.resources :home, :only => :index
 
