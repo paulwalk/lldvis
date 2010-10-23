@@ -9,14 +9,14 @@
 	<%= link_to_unless_current 'Use Cases',"#{ActionController::Base.relative_url_root}/usecases" %> |
 	<%= link_to_unless_current 'Vocabulary Types',"#{ActionController::Base.relative_url_root}/vocabtypes" %> |
 	<%= link_to_unless_current 'Vocabularies',"#{ActionController::Base.relative_url_root}/vocabs" %> |
-	<%= link_to_unless_current 'Usages',"#{ActionController::Base.relative_url_root}/usage" %>
+	<%= link_to_unless_current 'Usages',"#{ActionController::Base.relative_url_root}/usages" %>
 	
 	<p style="color: green"><%= flash[:notice] %></p>
 </div>
 </div>
 
-<div id="header-logo">
-<h1><a href="<%=ActionController::Base.relative_url_root%>/">LLD</a></h1>
+<div id="header">
+<a class="app-title" href="<%=ActionController::Base.relative_url_root%>/">LLD Visualiser</a>
 </div>
 
 <hr />
