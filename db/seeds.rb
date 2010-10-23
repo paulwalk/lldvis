@@ -105,6 +105,19 @@ Vocab.create(:name => "CITO",:vocabtype_id => vocabtype.id)
 Vocab.create(:name => "SURF",:vocabtype_id => vocabtype.id)
 Vocab.create(:name => "RDFS",:vocabtype_id => vocabtype.id)
 Vocab.create(:name => "W3C Media Ontology",:vocabtype_id => vocabtype.id)
+Vocab.create(:name => "BIO",:vocabtype_id => vocabtype.id)
+Vocab.create(:name => "Music Ontology",:vocabtype_id => vocabtype.id)
+Vocab.create(:name => "Organisational Ontology",:vocabtype_id => vocabtype.id)
+Vocab.create(:name => "Dewey.info",:vocabtype_id => vocabtype.id)
+Vocab.create(:name => "LCSH",:vocabtype_id => vocabtype.id)
+Vocab.create(:name => "Thesaurus for Graphic Materials",:vocabtype_id => vocabtype.id)
+Vocab.create(:name => "Library of Congress Name Authority File",:vocabtype_id => vocabtype.id)
+Vocab.create(:name => "Freebase",:vocabtype_id => vocabtype.id)
+Vocab.create(:name => "Rameau",:vocabtype_id => vocabtype.id)
+Vocab.create(:name => "Linked Data Services der DNB",:vocabtype_id => vocabtype.id)
+Vocab.create(:name => "EDM",:vocabtype_id => vocabtype.id)
+Vocab.create(:name => "Instituto Geográfico Nacional (España)",:vocabtype_id => vocabtype.id)
+
 
 vocabtype = Vocabtype.create(:name => "Existing published Vocabularies available for reuse")
 # Vocab.create(:name => "",:vocabtype_id => vocabtype.id)
@@ -312,28 +325,52 @@ usecase = Usecase.create(:name => "Collecting material related to courses at The
   Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("W3C Media Ontology").id)
   
 usecase = Usecase.create(:name => "Talis Prism 3")
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("FOAF").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("BIBO").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("DC Terms").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("BIO").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("Music Ontology").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("Organisational Ontology").id)
+
 usecase = Usecase.create(:name => "Pode")
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("FRBR Core").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("DC Terms").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("BIBO").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("Lexvo").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("Geonames").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("FOAF").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("SKOS").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("Dewey.info").id)
+
 usecase = Usecase.create(:name => "Recollection")
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("LCSH").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("Thesaurus for Graphic Materials").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("Library of Congress Name Authority File").id)
+
 usecase = Usecase.create(:name => "International Registry for Authors")
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("FOAF").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("SKOS").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("BIBO").id)
+
 usecase = Usecase.create(:name => "Civil War Data 150")
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("dbPedia").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("LCSH").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("Freebase").id)
+
 usecase = Usecase.create(:name => "Mapping Scholarly Debate")
+
 usecase = Usecase.create(:name => "Polymath Virtual Library")
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("dbPedia").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("VIAF").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("LCSH").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("RAMEAU").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("Linked Data Services der DNB").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("Instituto Geográfico Nacional (España)").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("EDM").id)
+
 usecase = Usecase.create(:name => "Community Information Service")
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("BIBO").id)
+  Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("CITO").id)
+  
 usecase = Usecase.create(:name => "AuthorClaim")
-
-
-
-# # CREATE FUNDING STREAMS
-# File.open("#{CSV_DIRECTORY_PATH}/Lookups-Funding Streams.csv",'r') do |csv_file|
-#   first_row = true
-#   FasterCSV.foreach(csv_file.path) do |row|
-#     if first_row && CSV_FILE_CONTAINS_HEADER_ROW then
-#       first_row = false
-#       next #skip this iteration
-#     end
-#     Fundingstream.create(:title=>row[0],:funder_id=>Funder.find_by_title(row[1]).id)
-#     puts "Created Fundingstream: #{row[0]}"
-#   end
-# end
-# puts "---"
 
