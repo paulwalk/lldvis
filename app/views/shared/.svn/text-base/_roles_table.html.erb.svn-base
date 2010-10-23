@@ -1,0 +1,12 @@
+<table class="panel-grid">
+	<tr class="panel-grid">
+		<th class="panel-grid">Role</th>
+	</tr>
+	<%
+		@roles_subject.roles.each do |role|
+	%>
+	<tr class="panel-grid">
+		<td class="panel-grid"><%= role.display_title %></td>
+	</tr>
+	<% end %>
+</table>

@@ -1,0 +1,50 @@
+<% is_logged_in = true unless current_person == nil %>
+
+<div style="float: right">
+	
+<div id="login-details">
+<% if is_logged_in then %>
+	Logged in as <%= current_person.display_name %> <%= link_to 'Logout',"#{ActionController::Base.relative_url_root}/person_sessions/destroy", :class => 'action-link' %>
+<% else %>
+	<%= link_to 'Login',"#{ActionController::Base.relative_url_root}/person_sessions/new", :class => 'action-link' %>
+<% end %>
+</div>
+<br />
+<div id="navibar">
+	<%= link_to_unless_current 'Home',"#{ActionController::Base.relative_url_root}/" %> |
+	<% #link_to_unless_current 'Big Table of Deliverables',"#{ActionController::Base.relative_url_root}/bigtable/" %> |
+	<%= link_to_unless_current 'Deliverables',"#{ActionController::Base.relative_url_root}/deliverables/" %> |
+	<%= link_to_unless_current 'Themes',"#{ActionController::Base.relative_url_root}/themes/" %> |
+	
+	<% if permitted_to? :admin_resource, :admin %>
+		<%= link_to_unless_current 'Admin',"#{ActionController::Base.relative_url_root}/admin/" %> |
+	<% end %>
+
+<!--	
+	<% if permitted_to?  :admin_resource, :deliverables %>
+		<%= link_to_unless_current 'Deliverables',"#{ActionController::Base.relative_url_root}/deliverables/" %> |
+	<% end %>
+	<% if permitted_to? :admin_resource, :themes %>
+		<%= link_to_unless_current 'Themes',"#{ActionController::Base.relative_url_root}/themes/" %> |
+	<% end %>
+	<% if permitted_to?  :admin_resource, :themetypes %>
+		<%= link_to_unless_current 'Theme Types',"#{ActionController::Base.relative_url_root}/themetypes/" %> |
+	<% end %>
+	<br />
+	<% if permitted_to? :admin_resource, :people %>
+		<%= link_to_unless_current 'People',"#{ActionController::Base.relative_url_root}/people/" %> |
+	<% end %>
+	<% if permitted_to?  :admin_resource, :allocations %>
+		<%= link_to_unless_current 'Allocations',"#{ActionController::Base.relative_url_root}/allocations/" %> |
+	<% end %>
+-->
+	<%= link_to_unless_current 'Help',"#{ActionController::Base.relative_url_root}/help/" %>
+	
+	<p style="color: green"><%= flash[:notice] %></p>
+</div>
+</div>
+
+<div id="header-logo">
+<a href="<%=ActionController::Base.relative_url_root%>/"><img src="<%=ActionController::Base.relative_url_root%>/images/logo3.png" border="0"/></a>
+</div>
+

@@ -1,0 +1,31 @@
+<%= render :partial => "shared/menu_bar"%>
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1"><%= @table_title %></a></li>
+	</ul>
+	<div id="tabs-1">
+		<table class="panel-grid">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th class="{sorter: false}">&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @vocabs.each do |vocab| %>
+				  <tr>
+				    <td><%= link_to vocab.name, vocab %></td>
+				    <td class="panel-grid-operations"><%= link_to 'Edit', edit_vocab_path(vocab) %> | <%= link_to 'Destroy', vocab, :confirm => 'Are you sure?', :method => :delete %></td>
+				  </tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+
+<br />
+
+<%= link_to 'New vocab', new_vocab_path %>

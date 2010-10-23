@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>LLD</title>
+	
+	<%= stylesheet_link_tag "jquery-ui-1.8.4.custom" %>
+	<%= stylesheet_link_tag "ui.jqgrid" %>
+	<%= stylesheet_link_tag "main" %>
+
+	<%= javascript_include_tag "jquery-1.4.2.min" %>
+	<%= javascript_include_tag "jquery-ui-1.8.4.custom.min" %>
+	<%= javascript_include_tag "jquery.tablesorter.min" %>
+	<%= javascript_include_tag "jquery.metadata" %>
+	<%= javascript_include_tag "jquery.jqGrid.min" %>
+	<%= javascript_include_tag "application" %>
+	
+	<script>
+		$(document).ready(function() {
+			$.tablesorter.defaults.widgets = ['zebra'];
+			$.tablesorter.defaults.textExtraction = 'complex'
+			$("table.panel-grid").tablesorter();
+		} 
+		);
+	</script>
+	
+	<%= yield :head %>
+</head>
+<body <%= yield :body_tag %>>
+
+<%= yield %>
+
+<%= render :partial => "shared/footer"%>
+</body>
+</html>
+
+<%-
+#javascript_include_tag "prototype"
+#javascript_include_tag "effects"
+#javascript_include_tag "dragdrop"
+#javascript_include_tag "controls"
+-%>

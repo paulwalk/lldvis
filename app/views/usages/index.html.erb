@@ -1,0 +1,34 @@
+<%= render :partial => "shared/menu_bar"%>
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1"><%= @table_title %></a></li>
+	</ul>
+	<div id="tabs-1">
+		<table class="panel-grid">
+			<thead>
+				<tr>
+					<th>Usecase</th>
+					<th>Vocab</th>
+					<th class="{sorter: false}">Usage</th>
+					<th class="{sorter: false}">&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @usages.each do |usage| %>
+				  <tr>
+				    <td><%= link_to usage.usecase.name, usage.usecase %></td>
+						<td><%= link_to usage.vocab.name, usage.vocab %></td>
+				    <td><%= link_to usage.description, usage %></td>
+						<td class="panel-grid-operations"><%= link_to 'Edit', edit_usage_path(usage) %> | <%= link_to 'Destroy', usage, :confirm => 'Are you sure?', :method => :delete %></td>
+				  </tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+<br />
+
+<%= link_to 'New usage', new_usage_path %>

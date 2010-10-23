@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @topic.name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @topic.url %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%=h @topic.note %>
+</p>
+
+<p>
+  <b>Cluster:</b>
+  <%=h @topic.cluster %>
+</p>
+
+
+<%= link_to 'Edit', edit_topic_path(@topic) %> |
+<%= link_to 'Back', topics_path %>

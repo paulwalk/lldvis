@@ -1,0 +1,8 @@
+./script/generate scaffold cluster name:string url:string note:text
+./script/generate scaffold vocabtype name:string url:string note:text
+./script/generate scaffold vocab name:string url:string note:text vocabtype:references
+./script/generate scaffold usecase name:string goal:text url:string
+./script/generate scaffold topic name:string url:string note:text cluster:references
+./script/generate scaffold usage description:string note:text vocab:references usecase:references
+
+./script/generate migration topics_usecases

@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @vocabtype.name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @vocabtype.url %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%=h @vocabtype.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_vocabtype_path(@vocabtype) %> |
+<%= link_to 'Back', vocabtypes_path %>

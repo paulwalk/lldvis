@@ -1,0 +1,23 @@
+<p>
+  <b>Description:</b>
+  <%=h @usage.description %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%=h @usage.note %>
+</p>
+
+<p>
+  <b>Vocab:</b>
+  <%=h @usage.vocab %>
+</p>
+
+<p>
+  <b>Usecase:</b>
+  <%=h @usage.usecase %>
+</p>
+
+
+<%= link_to 'Edit', edit_usage_path(@usage) %> |
+<%= link_to 'Back', usages_path %>

@@ -1,0 +1,28 @@
+<h1>Editing usage</h1>
+
+<% form_for(@usage) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :note %><br />
+    <%= f.text_area :note %>
+  </p>
+  <p>
+    <%= f.label :vocab %><br />
+    <%= f.text_field :vocab %>
+  </p>
+  <p>
+    <%= f.label :usecase %><br />
+    <%= f.text_field :usecase %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @usage %> |
+<%= link_to 'Back', usages_path %>

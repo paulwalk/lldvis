@@ -1,0 +1,38 @@
+		
+<table class="panel-grid-change-log">
+	<tr class="panel-grid-change-log">
+		<th class="panel-grid-change-log">When</th>
+		<th class="panel-grid-change-log">Type</th>
+		<th class="panel-grid-change-log">Change</th>
+		<th class="panel-grid-change-log">By whom</th>
+		<th class="panel-grid-change-log">Optional comment</th>
+	</tr>
+	
+	<% @audits.each do |audit| %>
+		<tr class="panel-grid-change-log">
+			<td class="panel-grid-change-log">
+				<%= audit.created_at.strftime('%H:%M %d/%m/%Y') %>
+			</td>
+			<td class="panel-grid-change-log">
+				<%= audit.action.capitalize %>
+			</td>
+			<td class="panel-grid-change-log">
+				<% if audit.action == 'update' then %>
+					<%
+						audit.changes.each do |change|
+					%>
+						<b><%= change[0].to_s.capitalize %></b> was changed from <%= change[1][0].to_s %> to <%= change[1][1].to_s %><br />
+					<% end %>
+				<% else %>
+					record created
+				<% end %>
+			</td>
+			<td class="panel-grid-change-log"><%= Person.find(audit.user_id).display_name %></td>
+			<td class="panel-grid-change-log">
+				<% unless audit.comment == nil then%>
+				<%= audit.comment %>
+				<% end %>
+			</td>
+		</tr>
+	<% end %>
+</table>

@@ -1,0 +1,30 @@
+<%= render :partial => "shared/menu_bar"%>
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Clusters</a></li>
+	</ul>
+	<div id="tabs-1">
+		<table class="panel-grid">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th class="{sorter: false}">&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @clusters.each do |cluster| %>
+				  <tr>
+				    <td><%= link_to cluster.name, cluster %></td>
+				    <td class="panel-grid-operations"><%= link_to 'Edit', edit_cluster_path(cluster) %> | <%= link_to 'Destroy', cluster, :confirm => 'Are you sure?', :method => :delete %></td>
+				  </tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+<br />
+
+<%= link_to 'New cluster', new_cluster_path %>

@@ -1,0 +1,33 @@
+<%= render :partial => "shared/menu_bar"%>
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1"><%= @table_title %></a></li>
+	</ul>
+	<div id="tabs-1">
+		<table class="panel-grid">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Vocabs</th>
+					<th>Topics</th>
+					<th class="{sorter: false}">&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @usecases.each do |usecase| %>
+				  <tr>
+				    <td><%= link_to usecase.name, usecase %></td>
+						<td><%= link_to usecase.vocabs.size,"#{ActionController::Base.relative_url_root}/usecases/#{usecase.id}/vocabs/" %></td>
+						<td><%= link_to usecase.topics.size,"#{ActionController::Base.relative_url_root}/usecases/#{usecase.id}/topics/" %></td>
+				    <td class="panel-grid-operations"><%= link_to 'Edit', edit_usecase_path(usecase) %> | <%= link_to 'Destroy', usecase, :confirm => 'Are you sure?', :method => :delete %></td>
+				  </tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<br />
+
+<%= link_to 'New usecase', new_usecase_path %>

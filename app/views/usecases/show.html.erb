@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @usecase.name %>
+</p>
+
+<p>
+  <b>Goal:</b>
+  <%=h @usecase.goal %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @usecase.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_usecase_path(@usecase) %> |
+<%= link_to 'Back', usecases_path %>

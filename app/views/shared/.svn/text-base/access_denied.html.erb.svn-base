@@ -1,0 +1,6 @@
+
+<%
+	person = current_person
+%>
+<h2>You are not authorised to access this resource and access has been denied</h2>
+If you believe that you ought to have access to this resource, please contact the systems admin.
