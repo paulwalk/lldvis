@@ -1,4 +1,16 @@
-This is an attempt to map usecases, vocabularies, topics etc. from the work of the W3C Incubator group on Library Linked Data
+This is an attempt to map usecases, vocabularies, topics from the work of 
+the W3C Incubator group on Library Linked Data [1].
 
 I began making this during the meeting in Pittsburgh on 23/10/2010
 
+Installation:
+
+0. git clone http://github.com/paulwalk/lldvis.git
+1. cd lldvis
+2. rake db:create
+3. rake db:migrate
+4. rake db:seed
+5. ruby script/server
+6. http://localhost:3000
+
+[1] http://www.w3.org/2005/Incubator/lld/wiki/Use_Cases
