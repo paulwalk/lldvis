@@ -1,6 +1,7 @@
-lldvis is a ruby on rails application to help visualize rdf vocabularies
-in use in the library linked data domain as documented in use cases on the 
-w3c lld interest group [1]
+This is an attempt to map usecases, vocabularies, topics from the work of 
+the W3C Incubator group on Library Linked Data [1].
+
+I began making this during the meeting in Pittsburgh on 23/10/2010
 
 Installation:
 

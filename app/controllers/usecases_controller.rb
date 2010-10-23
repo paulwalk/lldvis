@@ -2,7 +2,13 @@ class UsecasesController < ApplicationController
   # GET /usecases
   # GET /usecases.xml
   def index
-    @usecases = Usecase.all
+    if params[:vocab_id] then
+      @usecases = Vocab.find(params[:vocab_id]).usecases
+      @table_title = "Usecases using the vocab: <i>#{Vocab.find(params[:vocab_id]).name}</i>"
+    else
+      @usecases = Usecase.all
+      @table_title = "All Usecases"
+    end
 
     respond_to do |format|
       format.html # index.html.erb
