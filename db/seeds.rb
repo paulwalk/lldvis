@@ -117,6 +117,7 @@ Vocab.create(:name => "Rameau",:vocabtype_id => vocabtype.id)
 Vocab.create(:name => "Linked Data Services der DNB",:vocabtype_id => vocabtype.id)
 Vocab.create(:name => "EDM",:vocabtype_id => vocabtype.id)
 Vocab.create(:name => "Instituto Geográfico Nacional (España)",:vocabtype_id => vocabtype.id)
+Vocab.create(:name => "PRONOM",:vocabtype_id => vocabtype.id)
 
 
 vocabtype = Vocabtype.create(:name => "Existing published Vocabularies available for reuse")

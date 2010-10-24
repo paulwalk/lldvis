@@ -1,3 +1,19 @@
 <%= render :partial => "shared/menu_bar"%>
 
 Home
+
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Vocabs by usage</a></li>
+	</ul>
+	<div id="tabs-1">
+		<div class="tags">
+			<ul>
+				<% @tags2.each do |tag| %>
+					<li class="tag<%= tag[1] %>"><a href="<%= ActionController::Base.relative_url_root %>/vocabs/<%= tag[0].id %>"><%= tag[0].name %></a></li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</div>

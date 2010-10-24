@@ -1,8 +1,37 @@
 
-/*.tag1 { font-size: 1.0em; }
-.tag2 { font-size: 1.2em; }
-.tag3 { font-size: 1.4em; }
-.tag4 { font-size: 1.6em; }*/
+	.tags ul{
+		background-color: white;
+		border: 1px solid #999999;
+		margin:1em 0;
+		padding:.5em 10px;
+		text-align:center;
+		}
+	.tags li{
+		margin:0;
+		padding:0;
+		list-style:none;
+		display:inline;
+		}
+	.tags li a{
+		text-decoration:none;
+/*		color:#fff;*/
+		padding:0 2px;	
+		}
+	.tags li a:hover{	
+		text-decoration:underline;
+		}		
+	
+	.tag1{font-size:100%;}
+	.tag2{font-size:120%;}
+	.tag3{font-size:140%;}
+	.tag4{font-size:160%;}
+	.tag5{font-size:180%;}
+	.tag6{font-size:200%;}
+	.tag7{font-size:220%;}
+	.tag8{font-size:240%;}
+	.tag9{font-size:260%;}
+	.tag10{font-size:280%;}
+
 
 img.icon-16 {
 	border: none;
