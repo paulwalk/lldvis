@@ -1,24 +1,14 @@
-<h1>Editing vocab</h1>
+<%= render :partial => "shared/menu_bar"%>
+<h2>Editing Vocabularies: <span class="entity-title"><%= @vocab.name %></span></h2>
 
-<% form_for(@vocab) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
-  </p>
-  <p>
-    <%= f.label :note %><br />
-    <%= f.text_area :note %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">General</a></li>
+	</ul>
+	<div id="tabs-1">
+		<%= render :partial => "form" %>
+	</div>
+</div>
 
 <%= link_to 'Show', @vocab %> |
 <%= link_to 'Back', vocabs_path %>

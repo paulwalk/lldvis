@@ -1,4 +1,6 @@
-./script/generate scaffold cluster name:string url:string note:text
+# ./script/generate scaffold cluster name:string url:string note:text
+./script/generate scaffold topiccluster name:string url:string note:text
+./script/generate scaffold usecasecluster name:string note:text
 ./script/generate scaffold vocabtype name:string url:string note:text
 ./script/generate scaffold vocab name:string url:string note:text vocabtype:references
 ./script/generate scaffold usecase name:string goal:text url:string

@@ -4,7 +4,7 @@ class CreateTopics < ActiveRecord::Migration
       t.string :name
       t.string :url
       t.text :note
-      t.references :cluster
+      t.references :topiccluster
 
       t.timestamps
     end

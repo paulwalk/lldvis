@@ -1,18 +1,29 @@
-<p>
-  <b>Name:</b>
-  <%=h @usecase.name %>
-</p>
+<%= render :partial => "shared/menu_bar"%>
+<h2>Showing Use case: <span class="entity-title"><%= @usecase.name %></span></h2>
 
-<p>
-  <b>Goal:</b>
-  <%=h @usecase.goal %>
-</p>
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">General</a></li>
+	</ul>
+	<div id="tabs-1">
+		<p>
+  		<b>Name:</b>
+		  <%=h @usecase.name %>
+		</p>
 
-<p>
-  <b>Url:</b>
-  <%=h @usecase.url %>
-</p>
+		<p>
+		  <b>Goal:</b>
+		  <%=h @usecase.goal %>
+		</p>
 
+		<p>
+		  <b>Url:</b>
+		  <%=h @usecase.url %>
+		</p>
+		</div>
+
+		
+	</div>
 
 <%= link_to 'Edit', edit_usecase_path(@usecase) %> |
 <%= link_to 'Back', usecases_path %>

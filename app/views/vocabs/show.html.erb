@@ -1,18 +1,28 @@
-<p>
-  <b>Name:</b>
-  <%=h @vocab.name %>
-</p>
+<%= render :partial => "shared/menu_bar"%>
 
-<p>
-  <b>Url:</b>
-  <%=h @vocab.url %>
-</p>
+<h2>Showing vocabulary: <span class="entity-title"><%= @vocab.name %></span></h2>
 
-<p>
-  <b>Note:</b>
-  <%=h @vocab.note %>
-</p>
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">General</a></li>
+	</ul>
+	<div id="tabs-1">
+		<p>
+  		<b>Name:</b>
+		  <%=h @vocab.name %>
+		</p>
 
+		<p>
+		  <b>Url:</b>
+		  <%=h @vocab.url %>
+		</p>
+
+		<p>
+		  <b>Note:</b>
+		  <%=h @vocab.note %>
+		</p>
+		</div>
+	</div>
 
 <%= link_to 'Edit', edit_vocab_path(@vocab) %> |
 <%= link_to 'Back', vocabs_path %>

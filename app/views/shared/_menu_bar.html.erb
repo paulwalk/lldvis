@@ -4,12 +4,11 @@
 
 <div id="navibar">
 	<%= link_to_unless_current 'Home',"#{ActionController::Base.relative_url_root}/" %> |
-	<%= link_to_unless_current 'Clusters',"#{ActionController::Base.relative_url_root}/clusters" %> |
+	<%= link_to_unless_current 'Topic Clusters',"#{ActionController::Base.relative_url_root}/topicclusters" %> |
 	<%= link_to_unless_current 'Topics',"#{ActionController::Base.relative_url_root}/topics" %> |
 	<%= link_to_unless_current 'Use Cases',"#{ActionController::Base.relative_url_root}/usecases" %> |
 	<%= link_to_unless_current 'Vocabulary Types',"#{ActionController::Base.relative_url_root}/vocabtypes" %> |
-	<%= link_to_unless_current 'Vocabularies',"#{ActionController::Base.relative_url_root}/vocabs" %> |
-	<%= link_to_unless_current 'Usages',"#{ActionController::Base.relative_url_root}/usages" %>
+	<%= link_to_unless_current 'Vocabularies',"#{ActionController::Base.relative_url_root}/vocabs" %>
 	
 	<p style="color: green"><%= flash[:notice] %></p>
 </div>

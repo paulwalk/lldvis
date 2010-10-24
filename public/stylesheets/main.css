@@ -125,14 +125,14 @@ td {
 }
 
 /*** PANEL TABLES ***/
-tr.panel,td.panel,td.panel-field-name,td.panel-field-value {
+.panel,.panel,.panel-field-name,.panel-field-value {
 	border: none;
 	font-size: 12px;
 	padding-left: 3px;
 	padding-right: 2px;
 }
 
-td.panel-field-name {
+.panel-field-name {
 	text-align: right;
 	font-weight: bold;
 	vertical-align: top;
@@ -143,7 +143,7 @@ table tr.even td {
 	color: #003366;
 }
 
-table.panel {
+.panel {
 	margin-top:0px;
 	border: 1px solid silver;
 	border-spacing: 0px;
@@ -159,32 +159,32 @@ div.page-navigation {
 /*	float: left;*/
 }
 
-table.panel-grid,table.panel-grid-change-log {
+.panel-grid,.panel-grid-change-log {
 	border-top: 1px solid silver;
 	border-right: 1px solid silver;
 	border-spacing: 0px;
 }
 
-table.panel-grid thead tr .header {
+.panel-grid thead tr .header {
 	background-image: url(images/bg.gif);
 	background-repeat: no-repeat;
 	background-position: center right;
 /*	cursor: pointer;*/
 }
 
-table.panel-grid thead tr .headerSortUp {
+.panel-grid thead tr .headerSortUp {
 	background-image: url(images/asc.gif);
 }
-table.panel-grid thead tr .headerSortDown {
+.panel-grid thead tr .headerSortDown {
 	background-image: url(images/desc.gif);
 }
 
-table.panel-grid thead tr .headerSortDown, table.panel-grid thead tr .headerSortUp {
+.panel-grid thead tr .headerSortDown, .panel-grid thead tr .headerSortUp {
 /*	background-color: #8dbdd8;*/
 /*	background-color: #cdcdcd;*/
 }
 
-td,th,td.panel-grid,td.panel-grid-number-cell,tr.panel-grid-change-log,td.panel-grid-change-log {
+td,th,.panel-grid,.panel-grid-number-cell,.panel-grid-change-log,.panel-grid-change-log {
 	text-align: left;
 	border-bottom: 1px solid silver;
 	border-left: 1px solid silver;
@@ -198,7 +198,7 @@ span.rowcount {
 	font-size: smaller;
 }
 
-td.panel-grid-number-cell {
+.panel-grid-number-cell {
 	text-align: right;
 }
 
@@ -206,7 +206,7 @@ th {
 	font-weight: bold;
 }
 
-th.panel-grid-operations-label,td.panel-grid-operations {
+.panel-grid-operations-label,.panel-grid-operations {
 	text-align: right;
 	font-size: smaller;
 	border-bottom: 1px solid silver;

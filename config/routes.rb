@@ -1,11 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :topicclusters
+
+  map.resources :usecaseclusters
+
   map.resources :vocabtypes, :has_many => [:vocabs]
 
   map.resources :usages
 
   map.resources :topics
-
-  map.resources :clusters
 
   map.resources :usecases, :has_many => [:vocabs,:topics]
 

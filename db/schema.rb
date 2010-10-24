@@ -9,9 +9,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101023193437) do
+ActiveRecord::Schema.define(:version => 20101024173954) do
 
-  create_table "clusters", :force => true do |t|
+  create_table "topicclusters", :force => true do |t|
     t.string   "name"
     t.string   "url"
     t.text     "note"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20101023193437) do
     t.string   "name"
     t.string   "url"
     t.text     "note"
-    t.integer  "cluster_id"
+    t.integer  "topiccluster_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -38,6 +38,13 @@ ActiveRecord::Schema.define(:version => 20101023193437) do
     t.text     "note"
     t.integer  "vocab_id"
     t.integer  "usecase_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "usecaseclusters", :force => true do |t|
+    t.string   "name"
+    t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

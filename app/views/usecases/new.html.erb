@@ -1,23 +1,14 @@
-<h1>New usecase</h1>
+<%= render :partial => "shared/menu_bar"%>
 
-<% form_for(@usecase) do |f| %>
-  <%= f.error_messages %>
+<h2>Create Usecase</h2>
 
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :goal %><br />
-    <%= f.text_area :goal %>
-  </p>
-  <p>
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">General</a></li>
+	</ul>
+	<div id="tabs-1">
+		<%= render :partial => "form" %>
+	</div>
+</div>
 
 <%= link_to 'Back', usecases_path %>
