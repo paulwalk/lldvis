@@ -1,0 +1,30 @@
+<%= render :partial => "shared/menu_bar"%>
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Topic Clusters</a></li>
+	</ul>
+	<div id="tabs-1">
+		<table class="panel-grid">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th class="{sorter: false}">&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @topicclusters.each do |topiccluster| %>
+				  <tr>
+				    <td><%= link_to topiccluster.name, topiccluster %></td>
+				    <td class="panel-grid-operations"><%= link_to 'Edit', edit_topiccluster_path(topiccluster) %> | <%= link_to 'Destroy', topiccluster, :confirm => 'Are you sure?', :method => :delete %></td>
+				  </tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+<br />
+
+<%= link_to 'New topic cluster', new_topiccluster_path %>

@@ -1,0 +1,13 @@
+<%= render :partial => "shared/menu_bar"%>
+
+<h2>New Topic Cluster</h2>
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">General</a></li>
+	</ul>
+	<div id="tabs-1">
+		<%= render :partial => "form" %>
+	</div>
+</div>
+
+<%= link_to 'Back', topicclusters_path %>

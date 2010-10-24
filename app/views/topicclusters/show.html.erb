@@ -1,0 +1,22 @@
+<%= render :partial => "shared/menu_bar"%>
+
+
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">General</a></li>
+	</ul>
+	<div id="tabs-1">
+		<p>
+		  <b>Name:</b>
+		  <%=h @topiccluster.name %>
+		</p>
+		<p>
+		  <b>Note:</b>
+		  <%=h @topiccluster.note %>
+		</p>
+	</div>
+</div>
+
+<%= link_to 'Edit', edit_topiccluster_path(@topiccluster) %> |
+<%= link_to 'Back', topicclusters_path %>

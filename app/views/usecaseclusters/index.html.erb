@@ -1,0 +1,22 @@
+<h1>Listing usecaseclusters</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Note</th>
+  </tr>
+
+<% @usecaseclusters.each do |usecasecluster| %>
+  <tr>
+    <td><%=h usecasecluster.name %></td>
+    <td><%=h usecasecluster.note %></td>
+    <td><%= link_to 'Show', usecasecluster %></td>
+    <td><%= link_to 'Edit', edit_usecasecluster_path(usecasecluster) %></td>
+    <td><%= link_to 'Destroy', usecasecluster, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New usecasecluster', new_usecasecluster_path %>

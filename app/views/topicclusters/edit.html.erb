@@ -1,0 +1,15 @@
+<%= render :partial => "shared/menu_bar"%>
+
+<h2>Editing Topic Cluster: <span class="entity-title"><%= @topiccluster.name %></span></h2>
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">General</a></li>
+	</ul>
+	<div id="tabs-1">
+		<%= render :partial => "form" %>
+	</div>
+</div>
+
+<%= link_to 'Show', @topiccluster %> |
+<%= link_to 'Back', topicclusters_path %>
