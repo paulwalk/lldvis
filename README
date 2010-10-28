@@ -5,12 +5,15 @@ I began making this during the meeting in Pittsburgh on 23/10/2010
 
 Installation:
 
+(this will use a file-based sqlite database - configured in config/database.yml)
+
 0. git clone http://github.com/paulwalk/lldvis.git
 1. cd lldvis
-2. rake db:create
-3. rake db:migrate
-4. rake db:seed
-5. ruby script/server
-6. http://localhost:3000
+2. cp config/database.yml.tmpl config/database.yml
+3. rake db:create
+4. rake db:migrate
+5. rake db:seed
+6. ruby script/server
+7. http://localhost:3000
 
 [1] http://www.w3.org/2005/Incubator/lld/wiki/Use_Cases
