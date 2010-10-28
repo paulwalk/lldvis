@@ -4,6 +4,7 @@ class CreateUsecases < ActiveRecord::Migration
       t.string :name
       t.text :goal
       t.string :url
+      t.references :usecasecluster
 
       t.timestamps
     end

@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20101024173954) do
     t.string   "name"
     t.text     "goal"
     t.string   "url"
+    t.integer  "usecasecluster_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
