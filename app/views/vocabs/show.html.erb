@@ -2,27 +2,30 @@
 
 <h2>Showing vocabulary: <span class="entity-title"><%= @vocab.name %></span></h2>
 
-<div id="tabs">
-	<ul>
-		<li><a href="#tabs-1">General</a></li>
-	</ul>
-	<div id="tabs-1">
-		<p>
-  		<b>Name:</b>
-		  <%=h @vocab.name %>
-		</p>
-
-		<p>
-		  <b>Url:</b>
-		  <%=h @vocab.url %>
-		</p>
-
-		<p>
-		  <b>Note:</b>
-		  <%=h @vocab.note %>
-		</p>
+<% rdfa_resource url_for(@vocab) do %>
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">General</a></li>
+		</ul>
+		<div id="tabs-1">
+			<table class="panel">
+				<tr class="panel">
+					<td class="panel-field-name">Name:</td>
+					<td property="rdfs:label" class="panel-field-value"><%=@vocab.name %></td>
+				</tr>
+				<tr class="panel">
+					<td class="panel-field-name">URL:</td>
+					<td class="panel-field-value"><%=@vocab.url %></td>
+				</tr>
+				<tr class="panel">
+					<td class="panel-field-name">Note:</td>
+					<td class="panel-field-value"><%=@vocab.note %></td>
+				</tr>
+			</table>
 		</div>
 	</div>
+<% end %>
+
 
 <%= link_to 'Edit', edit_vocab_path(@vocab) %> |
 <%= link_to 'Back', vocabs_path %>

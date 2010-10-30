@@ -1,33 +1,11 @@
 <%= render :partial => "shared/menu_bar"%>
 
 <h2>Editing Usecase: <span class="entity-title"><%= @usecase.name %></span></h2>
-<div id="tabs">
-	<ul>
-		<li><a href="#tabs-1">General</a></li>
-		<li><a href="#tabs-2">Topics</a></li>
-		<li><a href="#tabs-3">Vocabularies</a></li>
-		
-	</ul>
-	<div id="tabs-1">
-		<%= render :partial => "form" %>
-	</div>
-	<div id="tabs-2">
-		<div class="panel-field-value">
-			<% Topic.all.each do |topic| %> 
-				<%= check_box_tag "usecase[topic_ids][]", topic.id, @usecase.topics.include?(topic) %> <%= topic.name %>
-				<br />
-			<% end %>
-		</div>
-	</div>
-	<div id="tabs-3">
-		<div class="panel-field-value">
-			<% Vocab.all.each do |vocab| %> 
-				<%= check_box_tag "usecase[vocab_ids][]", vocab.id, @usecase.vocabs.include?(vocab) %> <%= vocab.name %>
-				<br />
-			<% end %>
-		</div>
-	</div>
+
+<%= render :partial => "form" %>
+
+<div class="page-navigation">
+	<a href="" onClick="document.getElementById('usecase_form').submit();return(false)" class="action-link">Save changes</a><%= link_to 'Abandon changes and go back', @usecase%>
+
 </div>
 
-<%= link_to 'Show', @usecase %> |
-<%= link_to 'Back', usecases_path %>

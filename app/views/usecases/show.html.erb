@@ -6,24 +6,23 @@
 		<li><a href="#tabs-1">General</a></li>
 	</ul>
 	<div id="tabs-1">
-		<p>
-  		<b>Name:</b>
-		  <%=h @usecase.name %>
-		</p>
-
-		<p>
-		  <b>Goal:</b>
-		  <%=h @usecase.goal %>
-		</p>
-
-		<p>
-		  <b>Url:</b>
-		  <%=h @usecase.url %>
-		</p>
-		</div>
-
-		
-	</div>
-
-<%= link_to 'Edit', edit_usecase_path(@usecase) %> |
-<%= link_to 'Back', usecases_path %>
+		<table class="panel">
+			<tr class="panel">
+				<td class="panel-field-name">Name:</td>
+				<td class="panel-field-value"><%=@usecase.name %></td>
+			</tr>
+			<tr class="panel">
+				<td class="panel-field-name">URL:</td>
+				<td class="panel-field-value"><%=@usecase.url %></td>
+			</tr>
+			<tr class="panel">
+				<td class="panel-field-name">Goal:</td>
+				<td class="panel-field-value"><%=@usecase.goal %></td>
+			</tr>
+		</table>
+	</div>		
+</div>
+<div class="page-navigation">
+	<%= link_to 'Edit', edit_usecase_path(@usecase),:class => "action-link" %> |
+	<%= link_to 'Back', usecases_path %>
+</div>

@@ -1,19 +1,69 @@
-<% form_for(@usecase) do |f| %>
-  <%= f.error_messages %>
+<% form_for @usecase, :html => {:id => 'usecase_form'} do |usecase_form| %>
+<%= usecase_form.error_messages %>
 
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :goal %><br />
-    <%= f.text_area :goal %>
-  </p>
-  <p>
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">General</a></li>
+		<li><a href="#tabs-2">Topics</a></li>
+		<li><a href="#tabs-3">Vocabularies</a></li>
+		
+	</ul>
+	<div id="tabs-1">
+		<table class="panel">
+			<tr class="panel">
+				<td class="panel-field-name">Name:</td>
+				<td class="panel-field-value"><%= usecase_form.text_field :name %></td>
+			</tr>
+			<tr class="panel">
+				<td class="panel-field-name">URL:</td>
+				<td class="panel-field-value"><%= usecase_form.text_field :url %></td>
+			</tr>
+			<tr class="panel">
+				<td class="panel-field-name">Goal:</td>
+				<td class="panel-field-value"><%= usecase_form.text_area :goal %></td>
+			</tr>
+	  </table>
+	</div>
+	<div id="tabs-2">
+		<div class="panel-field-value">
+			<div>
+			<%
+				rowcount = 0
+				Topic.all.each do |topic|
+				if rowcount % 20 == 0 then
+			%>
+			 	</div><div style="float:left">
+			<% end %>
+				<%= check_box_tag "usecase[topic_ids][]", topic.id, @usecase.topics.include?(topic) %> <%= topic.name %>
+				<br />
+				<%
+					rowcount += 1
+					end 
+				%>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+	<div id="tabs-3">
+		<div class="panel-field-value">
+			<div>
+			<%
+				rowcount = 0
+				Vocab.all.each do |vocab|
+				if rowcount % 20 == 0 then
+			%>
+			 	</div><div style="float:left">
+			<% end %>
+				<%= check_box_tag "vocab[vocab_ids][]", vocab.id, @usecase.vocabs.include?(vocab) %> <%= vocab.name %>
+				<br />
+				<%
+					rowcount += 1
+					end 
+				%>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+</div>
+
 <% end %>

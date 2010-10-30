@@ -1,8 +1,11 @@
+<%= auto_discovery_link_tag(:rss, "#{url_for(:action => 'index')}.rss") %>
+
+
 <%= render :partial => "shared/menu_bar"%>
 
 <div id="tabs">
 	<ul>
-		<li><a href="#tabs-1"><%= @table_title %></a></li>
+		<li><a href="#tabs-1"><%= @table_title %></a><a href="<%= "#{url_for(:action => params[:action])}.rss" %>"><%= image_tag "icons/feedicon.png" %></a></li>
 	</ul>
 	<div id="tabs-1">
 		<table class="panel-grid">

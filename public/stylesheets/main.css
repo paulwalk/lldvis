@@ -143,12 +143,6 @@ table tr.even td {
 	color: #003366;
 }
 
-.panel {
-	margin-top:0px;
-	border: 1px solid silver;
-	border-spacing: 0px;
-}
-
 div.page-navigation {
 	text-align: center;
 	background-color: white;
