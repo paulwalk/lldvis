@@ -2,7 +2,7 @@
 
 <h2>Showing vocabulary: <span class="entity-title"><%= @vocab.name %></span></h2>
 
-<% rdfa_resource url_for(@vocab) do %>
+
 	<div id="tabs">
 		<ul>
 			<li><a href="#tabs-1">General</a></li>
@@ -24,7 +24,7 @@
 			</table>
 		</div>
 	</div>
-<% end %>
+
 
 
 <%= link_to 'Edit', edit_vocab_path(@vocab) %> |
