@@ -178,7 +178,7 @@ div.page-navigation {
 /*	background-color: #cdcdcd;*/
 }
 
-td,th,.panel-grid,.panel-grid-number-cell,.panel-grid-change-log,.panel-grid-change-log {
+td,th {
 	text-align: left;
 	border-bottom: 1px solid silver;
 	border-left: 1px solid silver;

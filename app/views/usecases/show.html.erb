@@ -19,6 +19,24 @@
 				<td class="panel-field-name">Goal:</td>
 				<td class="panel-field-value"><%=@usecase.goal %></td>
 			</tr>
+			<tr class="panel">
+				<td class="panel-field-name">Vocabs:</td>
+				<td class="panel-field-value">
+					<% @usecase.vocabs.each do |vocab| %>
+						<%= link_to vocab.name,vocab %><br />
+					<% end %>
+					
+				</td>
+			</tr>
+			<tr class="panel">
+				<td class="panel-field-name">Topics:</td>
+				<td class="panel-field-value">
+					<% @usecase.topics.each do |topic| %>
+						<%= link_to topic.name,topic %><br />
+					<% end %>
+					
+				</td>
+			</tr>
 		</table>
 	</div>		
 </div>

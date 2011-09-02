@@ -2,13 +2,8 @@
 
 <h2>Create Usecase</h2>
 
-<div id="tabs">
-	<ul>
-		<li><a href="#tabs-1">General</a></li>
-	</ul>
-	<div id="tabs-1">
-		<%= render :partial => "form" %>
-	</div>
-</div>
+<%= render :partial => "form" %>
 
-<%= link_to 'Back', usecases_path %>
+<div class="page-navigation">
+	<a href="" onClick="document.getElementById('usecase_form').submit();return(false)" class="action-link">Save changes</a><%= link_to 'Abandon changes and go back', @usecase%>
+

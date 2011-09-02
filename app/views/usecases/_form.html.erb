@@ -54,7 +54,7 @@
 			%>
 			 	</div><div style="float:left">
 			<% end %>
-				<%= check_box_tag "vocab[vocab_ids][]", vocab.id, @usecase.vocabs.include?(vocab) %> <%= vocab.name %>
+				<%= check_box_tag "usecase[vocab_ids][]", vocab.id, @usecase.vocabs.include?(vocab) %> <%= vocab.name %>
 				<br />
 				<%
 					rowcount += 1
