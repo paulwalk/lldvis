@@ -121,7 +121,7 @@ Vocab.create(:name => "Freebase",:vocabtype_id => vocabtype.id)
 Vocab.create(:name => "Rameau",:vocabtype_id => vocabtype.id)
 Vocab.create(:name => "Linked Data Services der DNB",:vocabtype_id => vocabtype.id)
 Vocab.create(:name => "EDM",:vocabtype_id => vocabtype.id)
-Vocab.create(:name => "Instituto Geográfico Nacional (España)",:vocabtype_id => vocabtype.id)
+# Vocab.create(:name => "Instituto Geográfico Nacional (España)",:vocabtype_id => vocabtype.id)
 Vocab.create(:name => "PRONOM",:vocabtype_id => vocabtype.id)
 
 
@@ -228,7 +228,7 @@ usecasecluster = Usecasecluster.create(:name => 'Bibliographic data')
     Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("LCSH").id)
     Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("RAMEAU").id)
     Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("Linked Data Services der DNB").id)
-    Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("Instituto Geográfico Nacional (España)").id)
+    # Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("Instituto Geográfico Nacional (España)").id)
     Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("EDM").id)
     puts "successfully created record and associations for usecase with name '#{usecase.name}'"
   usecase = Usecase.create(:usecasecluster_id => usecasecluster.id,:name => "Community Information Service")
@@ -393,7 +393,7 @@ usecasecluster = Usecasecluster.create(:name => 'Digital objects')
 
 usecasecluster = Usecasecluster.create(:name => 'Citations')
     puts "successfully created record and associations for usecase with name '#{usecase.name}'"
-  usecase = Usecase.create(:usecasecluster_id => usecasecluster.id,:name => "Citation of ± Datasets")
+  usecase = Usecase.create(:usecasecluster_id => usecasecluster.id,:name => "Citation of Datasets")
     Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("OPM").id)
     Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("BIBO").id)
     Usage.create(:description =>"",:usecase_id => usecase.id,:vocab_id => Vocab.find_by_name("CITO").id)

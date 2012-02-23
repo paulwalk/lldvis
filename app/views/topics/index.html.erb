@@ -17,7 +17,7 @@
 				<% @topics.each do |topic| %>
 				  <tr>
 				    <td><%= link_to topic.name, topic %></td>
-				    <td><%= link_to topic.topiccluster.name, topic.topiccluster %></td>
+				    <td><%= link_to topic.topiccluster.name, topic.topiccluster unless topic.topiccluster.blank? %></td>
 				    <td class="panel-grid-operations"><%= link_to 'Edit', edit_topic_path(topic) %> | <%= link_to 'Destroy', topic, :confirm => 'Are you sure?', :method => :delete %></td>
 				  </tr>
 				<% end %>
